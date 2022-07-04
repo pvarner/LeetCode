@@ -19,6 +19,8 @@ class Solution:
                 for i in range(index,len(t)):
                     if t[index] == t[i] :
                         matchList2.append(i)
+                        if i not in matchList:
+                            return False
                 
                 if matchList != matchList2:
                     return False

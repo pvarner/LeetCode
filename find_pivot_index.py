@@ -1,4 +1,4 @@
-#LeetCode: 724. Find Pivor Index
+#LeetCode: 724. Find Pivot Index
 # Date: 7/2/2022
 
 class Solution:
