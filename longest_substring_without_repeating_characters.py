@@ -1,3 +1,4 @@
+# Not working yet
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         headIndex = 0
@@ -14,16 +15,23 @@ class Solution:
                     tmpLongest += 1
 
                 else:
-                    headIndex = s.index(s[tailIndex], headIndex, tailIndex) 
-                    tailIndex = headIndex + 1
+                    headIndex += 1 
+                    tailIndex = headIndex + 1 
                     if tmpLongest > longest:
                         longest = tmpLongest
+
+                    tmpLongest = 1
+
+        if tmpLongest > longest:
+            longest = tmpLongest
           
             
-        if headIndex < len(s) - 1 and s[-1] not in s[headIndex:tailIndex-1]:
-            tmpLongest += 1
-            if tmpLongest > longest:
-                longest = tmpLongest
+
+        return longest
+        #if headIndex < len(s) - 1 and s[-1] not in s[headIndex:tailIndex-1]:
+            #tmpLongest += 1
+            #if tmpLongest > longest:
+                #longest = tmpLongest
 
 
 
